@@ -1,0 +1,32 @@
+.Stars {
+  display: inline-block;
+  font-size: 24px;
+  font-family: Times; /* make sure ★ appears correctly */
+  line-height: 1;
+}
+
+.Star {
+  color: var(--star-background);
+}
+
+.filled {
+  color: #fc0;
+}
+
+.partially-filled {
+  position: relative;
+}
+
+.partially-filled::before {
+  content: '★';
+  color: #fc0;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: var(--percent);
+  z-index: 1;
+}
+
+.unfilled {
+  color: #ccc;
+}

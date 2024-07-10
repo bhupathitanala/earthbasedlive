@@ -1,0 +1,28 @@
+.counter {
+  text-align: center;
+  padding: 20px;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.statistic {
+  text-align: center;
+}
+
+.value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Add loading animation effects here */

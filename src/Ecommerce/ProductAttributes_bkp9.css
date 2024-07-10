@@ -1,0 +1,35 @@
+.product-attributes {
+/*    padding: 0 20px;*/
+}
+
+.attribute {
+    margin-bottom: 20px;
+}
+
+.attribute h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.attribute button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.attribute button.active {
+    outline: 2px solid black;
+    /* Outline for active button */
+}
+
+.selected-values {
+    margin-top: 20px;
+}
+
+.selected-values h2 {
+    margin-bottom: 10px;
+}

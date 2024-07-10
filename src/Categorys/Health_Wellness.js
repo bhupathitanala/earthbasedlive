@@ -1,0 +1,999 @@
+// import React, { useState } from "react";
+
+// import maximize from '../assets/maximize-2.png'
+// import buycard from '../assets/buycard.png'
+
+
+// import makhana_salt_pepper_large from '../assets/header_images/makhana_salt_pepper_large.png'
+// import makhana_salt_pepper_mini from '../assets/header_images/makhana_salt_pepper_mini.png'
+// import makhana_salt_pepper_single_large from '../assets/header_images/makhana_salt_pepper_single_large.png'
+// import makhana_salt_pepper_single_mini from '../assets/header_images/makhana_salt_pepper_single_mini.png'
+// import makhana_salt_pepper_bowl_large from '../assets/header_images/makhana_salt_pepper_bowl_large.png'
+// import makhana_salt_pepper_bowl_mini from '../assets/header_images/makhana_salt_pepper_bowl_mini.png'
+// import makhana_salt_pepper_back_large from '../assets/header_images/makhana_salt_pepper_back_large.png'
+// import makhana_salt_pepper_back_mini from '../assets/header_images/makhana_salt_pepper_back_mini.png'
+
+
+// import almond_packet_both_large from '../assets/header_images/almond_packet_both_large.png'
+// import barley_both_large from '../assets/header_images/barley_both_large.png'
+// import cashwe_front_large from '../assets/header_images/cashwe_front_large.png'
+// import Flax_Seeds_both_large from '../assets/header_images/Flax-Seeds_both_large.png'
+// import beetrot_front_large from '../assets/header_images/beetrot_front_large.png'
+// import nut_mix_front_large from '../assets/header_images/nut_mix_front_large.png'
+// import chai_seeds_front_large from '../assets/header_images/chai_seeds_front_large.png'
+
+// import powder_Double_Chocolate_front_large from '../assets/header_images/powder_Double_Chocolate_front_large.png'
+// import Protein_powder_Coffee_mocha_front_large from '../assets/header_images/Protein_powder_Coffee_mocha_front_large.png'
+// import hemp_powder_front_large from '../assets/header_images/hemp_powder_front_large.png'
+// import hemp_protein_front_large from '../assets/header_images/hemp_protein_front_large.png'
+// import coffee_mocha_front_large from '../assets/header_images/coffee_mocha_front_large.png'
+
+
+
+
+
+// const products = [
+//     {
+//         name: "Product 1",
+//         category: "Protein_Powder",
+//         rating: "5",
+//         productname: "Protein powder Double Chocolat...",
+//         brand: "Brand B",
+//         image: powder_Double_Chocolate_front_large,
+//         price: "₹159.00"
+//     },
+//     {
+//         name: "Product 1",
+//         category: "Protein_Powder",
+
+//         productname: "Protein powder Coffee mocha 450g...",
+
+//         rating: "5",
+//         brand: "Brand B",
+//         image: Protein_powder_Coffee_mocha_front_large,
+//         price: "₹159.00"
+//     },
+//     {
+//         name: "Product 1",
+//         category: "Protein_Powder",
+
+//         productname: "India Hemp Organics Hemp Protein Powder...",
+//         rating: "5",
+//         brand: "Brand B",
+//         image: hemp_powder_front_large,
+//         price: "₹159.00"
+//     },
+//     {
+//         name: "Product 1",
+//         category: "Protein_Powder",
+
+//         productname: "India 100% pure hemp protein powder...",
+
+//         rating: "5",
+//         brand: "Brand B",
+//         image: hemp_protein_front_large,
+//         price: "₹159.00"
+//     },
+//     {
+//         name: "Product 1",
+//         category: "Protein_Powder",
+
+//         productname: "STRIVE 21g Protein Powder- Coffe ....",
+
+//         rating: "5",
+//         brand: "Brand B",
+//         image: coffee_mocha_front_large,
+//         price: "₹159.00"
+//     },
+
+
+
+
+
+//     {
+//         name: "Product 1",
+//         category: "Healthy_Diet_Foods",
+
+//         productname: "Conscious Foods Makhana – Sal....",
+
+//         rating: "5",
+//         brand: "Brand B",
+//         image: makhana_salt_pepper_large,
+//         price: "₹159.00"
+//     },
+//     {
+//         name: "Product 1",
+//         category: "All",
+//         productname: "india Conscious Food Almonds. ....",
+
+//         rating: "4",
+//         brand: "Brand A",
+//         image: almond_packet_both_large,
+//         price: "₹159.00"
+//     },
+
+//     {
+//         name: "Product 1",
+//         category: "Healthy_Diet_Foods",
+//         rating: "5",
+//         productname: "Conscious Food Barley 500g....",
+
+//         brand: "Brand B",
+//         image: barley_both_large,
+//         price: "₹159.00"
+//     }, {
+//         name: "Product 1",
+//         category: "Healthy_Diet_Foods",
+//         productname: "Cashew Clusters 200G by Nourish You. ....",
+
+//         rating: "5",
+//         brand: "Brand B",
+//         image: cashwe_front_large,
+//         price: "₹159.00"
+//     }, {
+//         name: "Product 1",
+//         category: "Healthy_Diet_Foods",
+//         productname: "Conscious Food Flax Seeds | Pack of 2 ....",
+
+//         rating: "5",
+//         brand: "Brand B",
+//         image: Flax_Seeds_both_large,
+//         price: "₹159.00"
+//     },
+//     {
+//         name: "Product 1",
+//         category: "All",
+//         productname: "Ecotyl Beetroot Powder | Boosts Metabolism ....",
+
+//         rating: "3",
+//         brand: "Brand C",
+//         image: beetrot_front_large,
+//         price: "₹159.00"
+//     },
+
+//     {
+//         name: "Product 1",
+//         category: "All",
+//         productname: "Cranberry Walnut Nut Mix 250G by  ....",
+
+//         rating: "2",
+//         brand: "Brand D",
+//         image: nut_mix_front_large,
+//         price: "₹159.00"
+//     },
+
+//     {
+//         name: "Product 1",
+//         category: "Healthy_Diet_Foods",
+//         productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+
+//         rating: "2",
+//         brand: "Brand A",
+//         image: chai_seeds_front_large,
+//         price: "₹159.00"
+//     },
+
+
+//     // ... more products
+// ];
+
+// function Health_Wellness() {
+//     const [selectedCategory, setSelectedCategory] = useState("All");
+//     const [selectedRating, setSelectedRating] = useState("All");
+//     const [selectedBrand, setSelectedBrand] = useState("All");
+//     const [selectedPrice, setSelectedPrice] = useState("All");
+
+//     const filteredProducts = products.filter(product => {
+//         if (
+//             selectedCategory === "All" &&
+//             selectedRating === "All" &&
+//             selectedBrand === "All" &&
+//             selectedPrice === "All"
+//         ) {
+//             return true;
+//         } else {
+//             return (
+//                 (selectedCategory === "All" || product.category === selectedCategory) &&
+//                 (selectedRating === "All" || product.rating === selectedRating) &&
+//                 (selectedBrand === "All" || product.brand === selectedBrand) &&
+//                 (selectedPrice === "All" || product.price === selectedPrice)
+//             );
+//         }
+//     });
+
+//     const totalProducts = filteredProducts.length;
+
+//     return (
+
+//         <div>
+//             <div className="text-center mt-4"> 
+//                 <h2 className="Shoppage_Heading1">Health & Wellness</h2>
+//             </div>
+
+//             <div className="ms-5   side_nav">
+
+//                 <div className="  d-flex justify-content-space-evenly " >
+//                     <div className="col-2  ">
+
+
+//                         <div className="col-12 my-5">
+//                             <select className="form-control" value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
+//                                 {/* <option value="" disabled selected>All</option> */}
+//                                 <option value="All">Category</option>
+
+//                                 <option value="Healthy_Diet_Foods">Healthy Diet Foods</option>
+//                                 <option value="Protein_Powder">Protein Powder</option>
+//                             </select>
+//                         </div>
+
+//                         <div className="col-12 my-5" >
+//                             <select className="form-control" value={selectedRating} onChange={e => setSelectedRating(e.target.value)}>
+//                                 <option value="All">Rating</option>
+//                                 <option value="1">1 Star</option>
+//                                 <option value="2">2 Stars</option>
+//                                 <option value="3">3 Stars</option>
+//                                 <option value="4">4 Stars</option>
+//                                 <option value="5">5 Stars</option>
+//                             </select>
+//                         </div>
+
+
+//                         <div className="col-12 my-5" >
+//                             <select className="form-control" value={selectedBrand} onChange={e => setSelectedBrand(e.target.value)}>
+//                                 <option value="All">Brand</option>
+//                                 <option value="Brand A">Brand A</option>
+//                                 <option value="Brand B">Brand B</option>
+//                                 <option value="Brand C">Brand C</option>
+//                                 <option value="Brand C">Brand C</option>
+//                             </select>
+//                         </div>
+
+//                         <div className="col-12 my-5" >
+//                             <select className="form-control" value={selectedPrice} onChange={e => setSelectedPrice(e.target.value)}>
+//                                 <option value="All">Price</option>
+//                                 <option value="1000">Below 1000</option>
+//                                 <option value="5000">Above 5000</option>
+//                                 <option value="8000">8000</option>
+//                             </select>
+//                         </div>
+//                     </div>
+
+//                 </div>
+//             </div>
+
+//             <div className="container  marin_high">
+//                 <div className="row    my-5">
+
+//                     <div className="col-md-2">
+
+//                     </div>
+
+//                     <div className="col-md-10">
+//                         <div className="row d-flex justify-content-evenly  ">
+//                             {filteredProducts.map(product => (
+//                                 <div className="col-lg-3 col-md-3 col-sm-12 mb-5 p-2" key={product.name}>
+//                                     <div className="card" style={{ borderRadius: '20px' }}>
+//                                         <span class="offers">-39%</span>
+//                                         <div className="image_border">
+//                                             <img src={product.image} alt={product.name} className='img-fluid shopimg p-3' />
+//                                             <img src={maximize} alt={maximize} className='img-fluid maxmize_img_car' />
+//                                         </div>
+//                                         <div className="d-flex p-2">
+//                                             <div className="">
+//                                                 <p className='cardpara1 mt-3'>{product.name}</p>
+//                                                 <p className='cardpara2'>{product.productname}</p>
+//                                                 <p className='cardpara3'>{product.price}</p>
+//                                             </div>
+//                                             <div className="d-flex flex-column justify-content-center mt-4 ms-2">
+//                                                 <img src={buycard} alt={buycard} className="img-fluid buycard" />
+//                                             </div>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     </div>
+
+//                 </div>
+
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default Health_Wellness;
+
+
+
+
+import React, { useState } from "react";
+import { Carousel, Container, Row, Col, Button, Card, Modal, Navbar } from 'react-bootstrap';
+
+import maximize from '../assets/maximize-2.png';
+import buycard from '../assets/buycard.png';
+import Cotton_ear from '../assets/Beauty/BECO_Cotton_Ear.jpg';
+import tissue from '../assets/Beauty/Beco_Facial_Tissue_Carbox.webp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faShoppingCart, faHeart } from '@fortawesome/free-solid-svg-icons';
+import wish_img from '../assets/wish_img.png';
+
+import natural from '../assets/natural.png'
+import gmo from '../assets/gmo.png'
+import no_presetives from '../assets/no_presettives.png'
+import gluten from '../assets/gulten_free.png'
+
+import makhana_salt_pepper_large from '../assets/header_images/makhana_salt_pepper_large.png'
+import makhana_salt_pepper_mini from '../assets/header_images/makhana_salt_pepper_mini.png'
+import makhana_salt_pepper_single_large from '../assets/header_images/makhana_salt_pepper_single_large.png'
+import makhana_salt_pepper_single_mini from '../assets/header_images/makhana_salt_pepper_single_mini.png'
+import makhana_salt_pepper_bowl_large from '../assets/header_images/makhana_salt_pepper_bowl_large.png'
+import makhana_salt_pepper_bowl_mini from '../assets/header_images/makhana_salt_pepper_bowl_mini.png'
+import makhana_salt_pepper_back_large from '../assets/header_images/makhana_salt_pepper_back_large.png'
+import makhana_salt_pepper_back_mini from '../assets/header_images/makhana_salt_pepper_back_mini.png'
+const products = [
+
+    //Beauty and Bath
+ 
+  {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "1",
+        brand: "Brand A",
+        image: Cotton_ear,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+
+        price: "₹159.00",
+        text: "BECO Cotton Ear Bud 200 ......."
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  .......",
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },   {
+        id: 3,
+        image: makhana_salt_pepper_large,
+
+        image1: makhana_salt_pepper_large,
+        image2: makhana_salt_pepper_single_large,
+        image3: makhana_salt_pepper_bowl_large,
+        image4: makhana_salt_pepper_back_large,
+        image_mini1: makhana_salt_pepper_mini,
+        image_mini2: makhana_salt_pepper_single_mini,
+        image_mini3: makhana_salt_pepper_bowl_mini,
+        image_mini4: makhana_salt_pepper_back_mini,
+
+        name: 'Daily Alternative',
+        stars: '⭐⭐⭐⭐⭐ 5/5',
+        productname: 'Conscious Foods Makhana...',
+        descriptionfull: 'Conscious Foods Makhana – Salt & Pepper 65gm',
+        catagerious: 'Health & Wellness, Healthy Diet foods',
+
+        about: 'Found in the miraculous lotus plant, makhana or fox nuts are packed with nutrients and make way for a healthy snack. They are lotus seeds sourced from the beds of ponds or rivers. ',
+        about2: ' Once manually harvested, they need to be air-dried and roasted before they can be consumed. To make them as delicious as they are healthy, we flavour these makhanas with the strong flavours of salt and the subtle tinge of pepper. Full of natural ingredients, these makhanas make snacking a non-guilty pleasure!',
+        price: '₹149.00',
+    },
+  
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "Nutrition",
+        rating: "1",
+        brand: "Brand A",
+        image: Cotton_ear,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "BECO Cotton Ear Bud 200 ......."
+    },
+    {
+        name: "Product 1",
+        category: "Nutrition",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "Nutrition",
+        rating: "3",
+        brand: "Brand A",
+        image: Cotton_ear,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "BECO Cotton Ear Bud 200 ......."
+    },
+    {
+        name: "Product 1",
+        category: "Nutrition",
+        rating: "4",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "5",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "2",
+        brand: "Brand B",
+        image: tissue,
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        price: "₹159.00",
+        text: "Beco Facial Tissue Car  ......."
+
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "3",
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        brand: "Brand C",
+        image: "https://via.placeholder.com/150",
+        price: "₹159.00"
+    },
+    {
+        name: "Product 1",
+        category: "healthy_diet_foods",
+        rating: "4",
+        productname: "Ecotyl Chia Seeds | Raw | Rich in   ....",
+        brand: "Brand D",
+        image: "https://via.placeholder.com/150",
+        price: "₹159.00"
+    },
+
+
+
+];
+
+function Beauty() {
+    const [selectedCategory, setSelectedCategory] = useState("All");
+    const [selectedRating, setSelectedRating] = useState("All");
+    const [selectedBrand, setSelectedBrand] = useState("All");
+    const [selectedPrice, setSelectedPrice] = useState("All");
+
+    const filteredProducts = products.filter(product => {
+        if (
+            selectedCategory === "All" &&
+            selectedRating === "All" &&
+            selectedBrand === "All" &&
+            selectedPrice === "All"
+        ) {
+            return true;
+        } else {
+            return (
+                (selectedCategory === "All" || product.category === selectedCategory) &&
+                (selectedRating === "All" || product.rating === selectedRating) &&
+                (selectedBrand === "All" || product.brand === selectedBrand) &&
+                (selectedPrice === "All" || product.price === selectedPrice)
+            );
+        }
+    });
+
+    const totalProducts = filteredProducts.length;
+
+    const Sidebar = () => {
+        return (
+            <>
+                <div className="col-2 position-sticky vh-100 side_nav d-flex flex-row justify-content-center d-none d-lg-block ">
+                    <div className="sidebar-content overflow-y-auto overflow-x-hidden vh-100">
+                        <div className="text-center">
+                            <div className="col-12">
+                                <div>
+                                    <label className="form-label"><h4><b>Categorys</b></h4></label>
+                                    <ul className="list-unstyled">
+                                        <li>
+                                            <a href="#" className={`btn ${selectedCategory === "All" ? "btn-secondary" : ""} ${selectedCategory === "All" ? "selected" : ""}`} onClick={() => setSelectedCategory("All")}>All Categorys</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className={`btn ${selectedCategory === "healthy_diet_foods" ? "btn-secondary" : ""} ${selectedCategory === "healthy_diet_foods" ? "selected" : ""}`} onClick={() => setSelectedCategory("healthy_diet_foods")}>Healthy Diet foods</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className={`btn ${selectedCategory === "Nutrition" ? "btn-secondary" : ""} ${selectedCategory === "Nutrition" ? "selected" : ""}`} onClick={() => setSelectedCategory("Nutrition")}>Nutrition</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className={`btn ${selectedCategory === "Medicine" ? "btn-secondary" : ""} ${selectedCategory === "Medicine" ? "selected" : ""}`} onClick={() => setSelectedCategory("Medicine")}>Medicine</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className={`btn ${selectedCategory === "Female_Health_Care" ? "btn-secondary" : ""} ${selectedCategory === "Female_Health_Care" ? "selected" : ""}`} onClick={() => setSelectedCategory("Female_Health_Care")}>Female Health Care</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className={`btn ${selectedCategory === "Protein_Powder" ? "btn-secondary" : ""} ${selectedCategory === "Protein_Powder" ? "selected" : ""}`} onClick={() => setSelectedCategory("Protein_Powder")}> Protein Powder</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+
+
+
+                            </div>
+                            <div className="col-12 my-5">
+                                <label className="form-label"><h4><b>Rating</b></h4></label>
+                                <ul className="list-unstyled">
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "All" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("All")}>All Ratings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "1" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("1")}>⭐</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "2" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("2")}>⭐⭐</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "3" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("3")}>⭐⭐⭐ </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "4" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("4")}>⭐⭐⭐⭐</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "5" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("5")}>⭐⭐⭐⭐⭐</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-12 my-5">
+                                <label className="form-label"><h4><b>Brand</b></h4></label>
+                                <ul className="list-unstyled">
+                                    <li>
+                                        <a href="#" className={`btn ${selectedBrand === "All" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("All")}>All Brands</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedBrand === "Brand A" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand A")}>Brand A</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedBrand === "Brand B" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand B")}>Brand B</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedBrand === "Brand C" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand C")}>Brand C</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedBrand === "Brand D" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand D")}>Brand D</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-12 my-5">
+                                <label className="form-label"><h4><b>Price</b></h4></label>
+                                <ul className="list-unstyled">
+                                    <li>
+                                        <a href="#" className={`btn ${selectedPrice === "All" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("All")}>All Prices</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedPrice === "1000" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("1000")}>Below 1000</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedPrice === "5000" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("5000")}>Above 5000</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedPrice === "8000" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("8000")}>8000</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="col-12 d-block d-lg-none ">
+                    <div className="sidebar-content ">
+                        <div className="text-center">
+                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style={{ width: '250px' }}>
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Filters</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div className="text-center">
+                                        <div className="col-12">
+                                            <div>
+                                                <label className="form-label"><h4><b>Categorys</b></h4></label>
+                                                <ul className="list-unstyled">
+                                                    <li>
+                                                        <a href="#" className={`btn ${selectedCategory === "All" ? "btn-secondary" : ""} ${selectedCategory === "All" ? "selected" : ""}`} onClick={() => setSelectedCategory("All")}>All Categorys</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className={`btn ${selectedCategory === "healthy_diet_foods" ? "btn-secondary" : ""} ${selectedCategory === "healthy_diet_foods" ? "selected" : ""}`} onClick={() => setSelectedCategory("healthy_diet_foods")}>Healthy Diet foods</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className={`btn ${selectedCategory === "Nutrition" ? "btn-secondary" : ""} ${selectedCategory === "Nutrition" ? "selected" : ""}`} onClick={() => setSelectedCategory("Nutrition")}>Nutrition</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className={`btn ${selectedCategory === "Medicine" ? "btn-secondary" : ""} ${selectedCategory === "Medicine" ? "selected" : ""}`} onClick={() => setSelectedCategory("Medicine")}>Eye Care</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className={`btn ${selectedCategory === "Female_Health_Care" ? "btn-secondary" : ""} ${selectedCategory === "Female_Health_Care" ? "selected" : ""}`} onClick={() => setSelectedCategory("Female_Health_Care")}>Female Health Care</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className={`btn ${selectedCategory === "Protein_Powder" ? "btn-secondary" : ""} ${selectedCategory === "Protein_Powder" ? "selected" : ""}`} onClick={() => setSelectedCategory("Protein_Powder")}>Protein Powder</a>
+                                                    </li>
+                                                     
+                                                </ul>
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <div className="col-12 my-5">
+                                <label className="form-label"><h4><b>Rating</b></h4></label>
+                                <ul className="list-unstyled">
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "All" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("All")}>All Ratings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "1" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("1")}>⭐</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "2" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("2")}>⭐⭐</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "3" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("3")}>⭐⭐⭐ </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "4" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("4")}>⭐⭐⭐⭐</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className={`btn ${selectedRating === "5" ? "btn-secondary" : ""}`} onClick={() => setSelectedRating("5")}>⭐⭐⭐⭐⭐</a>
+                                    </li>
+                                </ul>
+                            </div>
+                                        <div className="col-12 my-5">
+                                            <label className="form-label"><h4><b>Brand</b></h4></label>
+                                            <ul className="list-unstyled">
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedBrand === "All" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("All")}>All Brands</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedBrand === "Brand A" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand A")}>Brand A</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedBrand === "Brand B" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand B")}>Brand B</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedBrand === "Brand C" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand C")}>Brand C</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedBrand === "Brand D" ? "btn-secondary" : ""}`} onClick={() => setSelectedBrand("Brand D")}>Brand D</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="col-12 my-5">
+                                            <label className="form-label"><h4><b>Price</b></h4></label>
+                                            <ul className="list-unstyled">
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedPrice === "All" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("All")}>All Prices</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedPrice === "1000" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("1000")}>Below 1000</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedPrice === "5000" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("5000")}>Above 5000</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className={`btn ${selectedPrice === "8000" ? "btn-secondary" : ""}`} onClick={() => setSelectedPrice("8000")}>8000</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div >
+            </>
+        );
+    };
+    const [showModal, setShowModal] = useState(false);
+    const [selectedCard, setSelectedCard] = useState(null);
+ 
+    const [mainImage, setMainImage] = useState(null);
+    const handleOpenModal = (product) => {
+        setSelectedCard(product);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleMiniImageClick1 = (imageSrc) => {
+        setSelectedCard({
+            ...selectedCard,
+            image: selectedCard.image1,
+        });
+    };
+    const handleMiniImageClick2 = (imageSrc) => {
+        setSelectedCard({
+            ...selectedCard,
+            image: selectedCard.image2,
+        });
+    };
+    const handleMiniImageClick3 = (imageSrc) => {
+        setSelectedCard({
+            ...selectedCard,
+            image: selectedCard.image3,
+        });
+    };
+    const handleMiniImageClick4 = (imageSrc) => {
+        setSelectedCard({
+            ...selectedCard,
+            image: selectedCard.image4,
+        });
+    };
+    const [cartItems, setCartItems] = useState([]);
+
+    const addToCart = (product) => {
+        const updatedCart = [...cartItems, product];
+        setCartItems(updatedCart);
+        // Save updated cart to local storage
+        localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+    };
+
+
+    const MainContent = () => {
+        return (
+            <>
+                <div className="col-10 d-none d-lg-block">
+                    <div className="container my-4">
+                        <div className="row">
+                            {filteredProducts.map(product => (
+                                <div className="col-lg-3 col-md-3 col-sm-12 mb-5 " key={product.name}>
+                                    <div className="card" style={{ borderRadius: '20px' }}>
+                                        <span class="offers">-39%</span>
+                                        <div className="image_border  hover_img">
+                                            <img src={product.image} alt={product.name} className='img-fluid shopimg p-3' />
+                                            <img src={maximize} alt="Maximize" className='img-fluid maxmize_img_car' onClick={() => handleOpenModal(product)} />
+                                            <img src={wish_img} alt={wish_img} className='img-fluid maxmize_wish' />
+
+
+
+                                        </div>
+                                        <div className="d-flex p-2">
+                                            <div className="">
+                                                <p className='cardpara1 mt-1  '>{product.name}</p>
+                                                <p className='cardpara2   '>{product.productname}</p>
+                                                <p className='cardpara3   '>{product.price}</p>
+                                            </div>
+                                            <div className="d-flex flex-column justify-content-center mt-4 ms-2">
+                                                
+                                                <img src={buycard} alt={buycard} className='buycard <i class="bi bi-person-fill"></i>' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                    </div>
+                </div>
+                <div className="col-12 d-block d-lg-none">
+                    <div className="container my-4">
+                        <div className="row">
+                            {filteredProducts.map(product => (
+                                <div className="col-6 col-md-4 col-sm-4 mb-5 " key={product.name}>
+                                    <div className="card" style={{ borderRadius: '20px' }}>
+                                        <span class="offers">-39%</span>
+                                        <div className="image_border">
+                                            <img src={product.image} alt={product.name} className='img-fluid shopimg  p-3' />
+                                            <img src={maximize} alt="Maximize" className='img-fluid maxmize_img_car' onClick={() => handleOpenModal(product)} />
+                                            <img src={wish_img} alt={wish_img} className='img-fluid maxmize_wish   ' />
+
+                                        </div>
+                                        <div className="d-flex p-2">
+                                            <div className="">
+                                                <p className='cardpara1  cardpara1_slick  '>{product.name}</p>
+                                                <p className='cardpara2  cardpara2_slick '>{product.productname}</p>
+                                                <p className='cardpara3 cardpara3_slick'>{product.price}</p>
+                                            </div>
+                                            <div className="d-flex flex-column justify-content-center mt-4 ms-2">
+                                            <img src={buycard} alt={buycard} className=' buycard <i class="bi bi-person-fill"></i>' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                    </div>
+                </div>
+
+                <Modal show={showModal} onHide={handleCloseModal} size="xl">
+                    <Modal.Header closeButton>
+                        <Modal.Title>{selectedCard && selectedCard.title}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        {selectedCard && (
+                            <div className="maximized-card row">
+                                <div className='col-md-5 col-xs-12'>
+
+                                    <img src={mainImage || selectedCard.image} alt={selectedCard.title} className='img-fluid' id="mainImage" />
+
+
+
+                                </div>
+                                <div className='col-md-2'>
+                                    <img src={selectedCard.image_mini1} alt={selectedCard.title} className='img-fluid' onClick={() => handleMiniImageClick1(selectedCard.image_mini1)} />
+                                    <img src={selectedCard.image_mini2} alt={selectedCard.title} className='img-fluid' onClick={() => handleMiniImageClick2(selectedCard.image_mini2)} />
+                                    <img src={selectedCard.image_mini3} alt={selectedCard.title} className='img-fluid' onClick={() => handleMiniImageClick3(selectedCard.image_mini3)} />
+                                    <img src={selectedCard.image_mini4} alt={selectedCard.title} className='img-fluid' onClick={() => handleMiniImageClick4(selectedCard.image_mini4)} />
+                                </div>
+
+
+
+
+                                <div className='col-md-5 col-xs-12' style={{ overflowY: 'auto', maxHeight: '400px' }}>
+                                    <h6 className='pop_up_cardhead'>{selectedCard.descriptionfull}</h6>
+                                    <p >{selectedCard.stars}</p>
+                                    <p className="deals_para">{selectedCard.price}</p>
+                                    <p className="deals_para1">{selectedCard.stocks}</p>
+
+                                    <div className="button-group row " style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '1rem' }}>
+                                        <Button className='col-5' onClick={() => addToCart(selectedCard)} style={{ border: "1px solid green", backgroundColor: "white", color: "green" }}>Add to cart</Button>
+                                        <Button className='col-5 ' variant="success" >Buy Now</Button>
+                                    </div>
+
+                                    <select name="cars" className="form-control mt-5">
+                                        <option value="Delivery Details">Delivery Details</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="opel">Opel</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+
+                                    <div className='col-12 mt-4'>
+                                        <div className="mt-5 row">
+                                            <div className='col-3 justify_con'>
+                                                <img src={natural} alt={natural} />
+                                                <p className="mt-4">Natural & Organic</p>
+                                            </div>
+                                            <div className='col-3 justify_con'>
+                                                <img src={gmo} alt={gmo} />
+                                                <br />
+                                                <p className="mt-4">NON  <br></br> GMO</p>
+                                            </div>
+                                            <div className='col-3  justify_con'>
+                                                <img src={no_presetives} alt={no_presetives} />
+                                                <p className="mt-4" >No Added   Preservatives</p>
+                                            </div>
+                                            <div className='col-3 justify_con'>
+                                                <img src={gluten} alt={gluten} />
+                                                <p className="mt-4">Gluten Free</p>
+                                            </div>
+                                        </div>
+                                        <hr className="m-auto" style={{ border: "none", height: "2px", width: "150px", backgroundColor: "#509264" }} />
+
+                                        <p className="mt-4">{selectedCard.about}</p>
+                                        <p className="mb-5">{selectedCard.about2}</p>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+                        )}
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleCloseModal}>Close</Button>
+                    </Modal.Footer>
+                </Modal>
+
+            </>
+        );
+    };
+
+
+    return (
+        <div className="col-12">
+            <div className="text-center mt-4">
+                <div className="d-none d-lg-block">
+                    <h2 className="Shoppage_Heading1">Health & Wellness</h2>
+                </div>
+                <div className="d-block d-lg-none">
+                    <h2 className="Shoppage_Heading12">Health & Wellness <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <div style={{ color: '#Ad9688' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-filter-square" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                                </svg>
+                            </div>
+
+                        </button></h2>
+                </div>
+
+            </div>
+            <div className="main-row">
+                <Sidebar />
+                <MainContent />
+            </div>
+        </div>
+    );
+}
+
+export default Beauty;
